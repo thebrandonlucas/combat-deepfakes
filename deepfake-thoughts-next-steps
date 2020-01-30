@@ -1,0 +1,116 @@
+The next step is to create a coin that incentivizes people to identify deepfakes. 
+But how?
+
+Currently we have coins that verify the originality of art: I believe this is tied to 
+the address of the content creator, and making comparisons. But how are comparisons made?
+
+Steemit is doing interesting work here: allowing users to be paid for their work based 
+on algorithmic "like" and upvote procedures. Is this the only way to verify something as
+a deepfake? To what degree must we rely on user input? We already know that AIs will ultimately
+be limited. In the absence of a permanent solution, we must find ways for people to 
+be rewarded for detecting deepfakes and creating algorithms to detect them. 
+
+There are two layers to the deepfake problem. The first is what we're all currently worrying 
+about: the altering of existing video. Let's call this the COPIED deepfake problem. The second
+problem is the creation of a completely new video that uses an actor and superimposes the face
+of the maligned person on it. Let's call this the ACTOR deepfake problem.
+
+To permanently solve the COPIED deepfake problem in one fell swoop, the following conditions must be met: 
+
+1) Given a list of deepfake candidate videos and assuming the original is among them, 
+	we must be able to prove which came first
+2) After proving which came first, we must prove that the video is indeed a fake 
+	of the original and not just a similar video. There needs to be a mechanism 
+	for distinguish the two. 
+3) A casual observer of video content should know that they are watching a deepfake, on whatever		medium that may be
+
+I've already found a way to solve 1), assuming that the original video was uploaded first 
+(which means we need a mechanism for instant upload): just compare timestamps. 
+
+Condition 2) is much more difficult to solve objectively. I don't see how we can "prove"
+that a video is a deepfake or just a similar video without verification from another person
+(or an AI). Both of these are really just making subjective judgements. 
+
+Condition 3) relies on the medium that the user is viewing the content through to inform them
+that they're watching a deepfake. That medium must have access to the blockchain. 
+In the long run however, I don't see this as being an issue, as widespread creation of deepfakes
+will force content providers to find methods of verification to their users. If they integrate
+the deepfake identification software as a plugin to their app that automatically tells users
+that they're watching a deepfake, users will be able to trust the platform, and in the long run, 
+platforms that don't provide this insurance for important videos (like political videos) will
+die off. 
+
+To permanently solve the ACTOR deepfake problem, I see no way around the following condition: 
+
+- We must know that the video was not tampered with, i.e. it is showing as recorded
+
+A potential solution to this is to upload parts of the video as it's being recorded
+(or have a mechanism that uploads immediately when the recording finishes)
+This solution settles with the knowledge that the user would have to use a system
+that implements the technology -- they'd have to record through a device or app that 
+verifies instantly. This is unfortunate, but hopefully we could make this a plugin
+or automated process in the future that is just smoothly integrated software
+in iPhones, Androids, and other cameras. It also means that users would have to 
+use our platform (or anything that it's integrated with -- perhaps Youtube 
+in the future) if they wanted a verified video. Which means that a lot of false 
+information can still be spread on any platforms that show fakes without warnings
+elsewhere: we just have to hope that eventually more and more legitimate video 
+sharing organizations like Youtube will want to adopt our technology. The more adopt
+it, the less false news is spread. 
+
+There are multiple use cases for different problems to solve, each of which have varying levels
+of difficulty: 
+
+- Proving that something DID happen and is an original: You could record something on an app
+	that immediately puts what you recorded on some immutable resource (like a protest event)
+
+- Proving that something DID NOT happen or WAS NOT said by a particular person: 
+	Much more difficult. Can't think of a universal, foolproof solution yet. 
+
+Here are a few options for problems that could be worked on: 
+
+- create a system that rewards people for detecting deepfakes (with/without AIs)
+	this is a "continual battle" approach, because it assumes that there is no
+	permanent solution and people must keep creating better AIs to combat the fakes
+
+- create a system that allows for verification that a video was published by who it
+	said it was published by. So if the White House makes a video and gives us their 
+	public key, we can confirm it ourselves. But how different is this than what we 
+	already have now?
+
+
+We could potentially use conditional tokens (ERC 1155) to help with the deepfake detection 
+problem. Conditional tokens apportion rewards to answers with that proved to be the most 
+correct. What if we used conditional tokens to say: if the AI detects a certain number
+of deepfakes with a certain accuracy, the address that uplaoded it receives a reward to match?
+
+One user could set a challenge uploading deepfakes to be detected, and then whichever
+algorithms guess correctly get the rewards. 
+
+What if we rewarded users who found a deepfake and tied it to the original video?
+All they would have to do is find two videos that are the exact same but with 
+different faces and compare the timestamps of which ones happened first.
+
+Steps: 
+- fix previous code to access timestamp by hash, and DONT store hash itself
+- add address of uploader to code
+- create a way for users to record video that immediately uploads upon completion
+- allow user to search through/scroll through uploaded original videos and deepfakes
+	based on timeline. 
+- reward users who find fake videos
+
+Problems yet to be solved: 
+- how do we reward users? What's to stop them from marking every video as a deepfake
+even when they don't relate to the original video and receiving rewards for doing bad
+work?
+- If we implemented some kind of majority-vote system, what's to stop a 51% fake attack?
+
+Then we could have AIs that just spend their time finding potential deepfake videos
+based on similarities to the other videos, 
+and the smart contract software determines (based on the timestamps) which one is 
+the original. 
+
+Why be afraid of combining the two best solutions we have to solve the problem: AI and 
+blockchain, when everyone is already trying to solve it with only AI anyway?
+
+We also have coins that verify the originality of content
