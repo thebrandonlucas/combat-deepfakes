@@ -6,6 +6,7 @@ import Video from './abis/Video.json'
 import Multihash from './ipfsHash'
 import Navbar from './components/pieces/Navbar'
 import MyVideos from './components/pages/myvideos.component'
+import Home from './components/pages/home.component'
 import Explore from './components/pages/explore.component'
 import DeepCoin from './components/pages/deepcoin.component'
 
@@ -43,7 +44,8 @@ class App extends Component {
       page: "myVideos", 
       originalLinks: null, 
       viewOriginal: null, 
-      fakeLink: null
+      fakeLink: null, 
+      usingWallet: true
       // linkFake: null
     }
   }
@@ -56,6 +58,7 @@ class App extends Component {
       window.web3 = new Web3(window.web3.currentProvider)
     } else {
       window.alert('Please use metamask!')
+      this.setState({ usingWallet: false })
     }
     window.ethereum.on('accountsChanged', (account) => {
       this.setState({ account: account[0] })
@@ -137,7 +140,9 @@ class App extends Component {
 
     // FIXME: why is render method called 3 times (confirm with console.log)
     let pageContent; 
-    if (this.state.page == "myVideos") {
+    if (this.state.usingWallet === false || this.state.page === "home") {
+      pageContent = <Home />
+    } else if (this.state.page == "myVideos") {
       pageContent = <MyVideos {...pageProps} ipfs={ipfs} />
     } else if (this.state.page == "exploreDeepfakes") {
       pageContent = <Explore {...pageProps} markAsDeepfake={this.markAsDeepfake} />
@@ -162,7 +167,7 @@ class App extends Component {
             <main role="main" className="col-lg-12 d-flex text-center borderb">
               <div className="mr-auto ml-auto borderc">
                 <p>&nbsp;</p>
-                <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>   
+                <p>&nbsp;</p>
                 {
                   this.state.contract != null 
                   ? 

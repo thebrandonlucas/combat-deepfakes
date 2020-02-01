@@ -11625,12 +11625,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x67fd8FC22A13119C530D527c0405d0d0a6159BEB",
-      "transactionHash": "0x2fe38d84c65db581d141607acbe706d64de18f2c467c7d7b13bf2d6decf2b03c"
+      "address": "0x0518E7212c673b703C7214cEBb127f47769265B2",
+      "transactionHash": "0xe05fb276219d7792ba20d17359b2decd22e7a68bab9c2661a44e223753144646"
     }
   },
   "schemaVersion": "3.0.2",
-  "updatedAt": "2020-01-31T15:06:10.417Z",
+  "updatedAt": "2020-02-01T02:52:42.536Z",
   "devdoc": {
     "methods": {}
   },

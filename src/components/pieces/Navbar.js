@@ -10,8 +10,9 @@ export default class Navbar extends Component {
 			showCompare: null, 
 			search: null, 
 			pages: [
-				{id: "exploreDeepfakes", title: "Explore Deepfakes"}, 
-				{id: "exploreOriginals", title: "Explore Originals"}, 
+				{id: "home", title: "Home"}, 
+				// {id: "exploreDeepfakes", title: "Explore Deepfakes"}, 
+				{id: "exploreOriginals", title: "Explore"}, 
 				{id: "myVideos", title: "My Videos"}, 
 				{id: "deepCoin", title: "Deepcoin"}
 			]
