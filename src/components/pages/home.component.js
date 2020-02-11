@@ -7,7 +7,7 @@ export default class Home extends Component {
 			<div className="content">
 				<h1>Combating Deepfakes</h1>
 				<p>This Dapp attempts to use the Ethereum blockchain and IPFS to help solve the Deepfake problem</p>
-				<p className="warning">WARNING: This is a work in progress and is not yet secure</p>
+				<p className="warning">WARNING: This is a work in progress</p>
 				<h3>What are Deepfakes?</h3>
 				<p>Read more about them&nbsp;
 					<a href="https://goberoi.com/exploring-deepfakes-20c9947c22d9">here</a>

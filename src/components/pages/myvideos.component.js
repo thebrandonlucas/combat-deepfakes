@@ -74,7 +74,6 @@ export default class MyVideos extends Component {
 	}
 
 	render() {
-		console.log("loading", this.state.loading)
 		return (
 			<div>
 			{

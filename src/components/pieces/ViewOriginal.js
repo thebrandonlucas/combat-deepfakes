@@ -3,7 +3,6 @@ import shortid from 'shortid'
 
 export default class ViewOriginal extends Component {
 	render() {
-		console.log('orig', this.props.originalLinks)
 		return(
 			<div >
 				<h3>The video</h3><h3><b>{this.props.fakeLink}</b></h3><h3> was linked to the following video(s):</h3>

@@ -57,8 +57,6 @@ export default class Explore extends Component {
 	}
 
 	render() {
-		console.log('page', this.props.page)
-		console.log('is this deepfakes?', this.props.page === "exploreDeepfakes")
 		return (
 			<div>
 				{ 
