@@ -42,19 +42,32 @@ export default class Navbar extends Component {
 				</li>
 				<div className="row">
 					{
-						this.state.pages.map((page) => {
-							return (
-									<a 
-										key={page.id}
-										className="nav-link" 
-										id={page.id} 
-										href={`#${page.id}`}
-										onClick={this.changePage}
-									>
-										{page.title}
-									</a>
-							)
-						})
+						// FIXME: refactor nav attributes and usingWallet to be outside of Navbar element
+						this.props.usingWallet == true
+						?
+							this.state.pages.map((page) => {
+								return (
+										<a 
+											key={page.id}
+											className="nav-link" 
+											id={page.id} 
+											href={`#${page.id}`}
+											onClick={this.changePage}
+										>
+											{page.title}
+										</a>
+								)
+							})
+						:   // show home page if they aren't using MetaMask
+							<a 
+								key={this.state.pages[0].id}
+								className="nav-link" 
+								id={this.state.pages[0].id} 
+								href={`#${this.state.pages[0].id}`}
+								onClick={this.changePage}
+							>
+								{this.state.pages[0].title}
+							</a>
 					}
 				</div>
 			</nav>

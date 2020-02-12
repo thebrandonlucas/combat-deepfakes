@@ -17,7 +17,7 @@ class App extends Component {
 
   async componentDidMount() {
     await this.loadWeb3()
-    await this.loadBlockchainData()
+    if (this.state.usingWallet) await this.loadBlockchainData()
   }
 
   constructor(props) {
@@ -41,7 +41,7 @@ class App extends Component {
       timestamp: null, 
       compareTimestamp: null, 
       showCompare: false, 
-      page: "myVideos", 
+      page: "home", 
       originalLinks: null, 
       viewOriginal: null, 
       fakeLink: null, 
@@ -51,18 +51,22 @@ class App extends Component {
   }
 
   async loadWeb3() {
+    let usingWallet
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum)
       await window.ethereum.enable()
     } else if (window.web3) {
       window.web3 = new Web3(window.web3.currentProvider)
     } else {
-      window.alert('Please use metamask!')
-      this.setState({ usingWallet: false })
+      // window.alert('Please use metamask!')
+      usingWallet = false
+      this.setState({ usingWallet })
     }
-    window.ethereum.on('accountsChanged', (account) => {
-      this.setState({ account: account[0] })
-    })
+    if (usingWallet) {
+      window.ethereum.on('accountsChanged', (account) => {
+        this.setState({ account: account[0] })
+      })
+    }
   }
 
   async loadBlockchainData() {
@@ -153,6 +157,8 @@ class App extends Component {
                       {...pageProps} 
                       coinContract={this.state.coinContract}
                     />
+    } else {
+      pageContent = <h1>Loading Videos...</h1>
     }
     // let pageContent = <h1>asdf</h1>
 
@@ -161,6 +167,7 @@ class App extends Component {
         <Navbar 
           account={this.state.account} 
           changePage={this.changePage}
+          usingWallet={this.state.usingWallet}
         />
         <div className="container-fluid mt-5">
           <div className="row">
@@ -168,15 +175,7 @@ class App extends Component {
               <div className="mr-auto ml-auto borderc">
                 <p>&nbsp;</p>
                 <p>&nbsp;</p>
-                {
-                  this.state.contract != null 
-                  ? 
-                    pageContent
-                    // this.state.page == "myVideos"
-                    // ? <MyVideos {...pageProps} ipfs={ipfs} />
-                    // : <Explore {...pageProps} markAsDeepfake={this.markAsDeepfake} />
-                  : <h1>Loading Videos...</h1>
-                }
+                {pageContent}
               </div>
             </main>
           </div>
