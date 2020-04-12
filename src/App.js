@@ -45,7 +45,8 @@ class App extends Component {
       originalLinks: null, 
       viewOriginal: null, 
       fakeLink: null, 
-      usingWallet: true
+      usingWallet: true, 
+      usingAccount: false, 
       // linkFake: null
     }
   }
@@ -72,6 +73,9 @@ class App extends Component {
   async loadBlockchainData() {
     const web3 = window.web3
     const accounts = await web3.eth.getAccounts()
+    if (accounts[0] !== null) {
+      this.setState({ usingAccount: true })
+    }
     this.setState({ account: accounts[0] })
     const networkId = await web3.eth.net.getId()
     const networkData = Video.networks[networkId]
@@ -97,7 +101,7 @@ class App extends Component {
   }
 
   markAsDeepfake = async (event) => {
-    const deepfakeHash = Multihash.getBytes32FromMultihash(event.target.value)
+    // const deepfakeHash = Multihash.getBytes32FromMultihash(event.target.value)
     // this.state.contract.methods.markAsDeepfake(
     
     // ).send({ from: this.state.account })
@@ -146,13 +150,13 @@ class App extends Component {
     let pageContent; 
     if (this.state.usingWallet === false || this.state.page === "home") {
       pageContent = <Home />
-    } else if (this.state.page == "myVideos") {
+    } else if (this.state.page === "myVideos") {
       pageContent = <MyVideos {...pageProps} ipfs={ipfs} />
-    } else if (this.state.page == "exploreDeepfakes") {
+    } else if (this.state.page === "exploreDeepfakes") {
       pageContent = <Explore {...pageProps} markAsDeepfake={this.markAsDeepfake} />
-    } else if (this.state.page == "exploreOriginals") {
+    } else if (this.state.page === "exploreOriginals") {
       pageContent = <Explore {...pageProps} markAsDeepfake={this.markAsDeepfake} />
-    } else if (this.state.page == "deepCoin") {
+    } else if (this.state.page === "deepCoin") {
       pageContent = <DeepCoin 
                       {...pageProps} 
                       coinContract={this.state.coinContract}
@@ -168,6 +172,7 @@ class App extends Component {
           account={this.state.account} 
           changePage={this.changePage}
           usingWallet={this.state.usingWallet}
+          usingAccount={this.state.usingAccount}
         />
         <div className="container-fluid mt-5">
           <div className="row">

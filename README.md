@@ -1,4 +1,4 @@
-# Aion - Combating Deepfakes with Blockchain
+# Combating Deepfakes with Blockchain
 
 This is an evolving project that is designed to combat the proliferation of deepfake videos and begin restoring trust in video integrity through the use of blockchain and timestamps. 
 

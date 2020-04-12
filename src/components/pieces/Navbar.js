@@ -43,7 +43,7 @@ export default class Navbar extends Component {
 				<div className="row">
 					{
 						// FIXME: refactor nav attributes and usingWallet to be outside of Navbar element
-						this.props.usingWallet == true
+						this.props.usingAccount === true
 						?
 							this.state.pages.map((page) => {
 								return (

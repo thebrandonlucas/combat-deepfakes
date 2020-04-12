@@ -15,7 +15,7 @@
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
     "chai-bignumber": "3.0.0",
-    "ipfs-http-client": "^40.1.0",
+    "ipfs-http-client": "^40.2.1",
     "js-sha3": "^0.8.0",
     "react": "16.8.4",
     "react-bootstrap": "1.0.0-beta.5",

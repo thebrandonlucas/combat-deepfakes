@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import shortid from 'shortid'
 import Multihash from '../../ipfsHash'
 import VideoInfo from '../pieces/VideoInfo'
-import ViewOriginal from '../pieces/ViewOriginal'
+// import ViewOriginal from '../pieces/ViewOriginal'
 
 
 export default class MyVideos extends Component {
@@ -24,7 +24,7 @@ export default class MyVideos extends Component {
 
 	async loadAuthorVideos() {
 		let videoDataLength = await this.props.contract.methods.getAuthorVideoCount(this.props.account).call()
-		if (videoDataLength != null && videoDataLength != 0) {
+		if (videoDataLength !== null && videoDataLength !== 0) {
 			videoDataLength = parseInt(videoDataLength['_hex'], 16) 
 			let videoData = []; 
 			for (let i = 0; i < videoDataLength; i++) {

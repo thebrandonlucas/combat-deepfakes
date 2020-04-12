@@ -43,7 +43,7 @@ export default class LinkOriginal extends Component {
 		return(
 			<div>
 				{
-					this.state.linkedFake == "" &&
+					this.state.linkedFake === "" &&
 					<div className="row justify-content-center">
 						<p>Link fake video to original by searching Qmhash</p>
 					</div>
@@ -70,7 +70,7 @@ export default class LinkOriginal extends Component {
 						<p>{this.props.linkedFake['multihash']}</p>
 					</div>
 					{
-						this.state.submitSearch != "" &&
+						this.state.submitSearch !== "" &&
 						<div className="col-sm-6">
 							<h3>with below as Original?</h3>
 							<video 

@@ -14,7 +14,7 @@ export default class Home extends Component {
 				</p>
 				<h3>How do I use this Dapp?</h3>
 				<div>
-					<p>If you haven't yet, install&nbsp;<a href="https://metamask.io/" target="_blank">MetaMask</a></p>
+					<p>If you haven't yet, install&nbsp;<a href="https://metamask.io/" target="_blank" rel="noopener noreferrer">MetaMask</a></p>
 					<p>Continue with instructions below after setting up MetaMask and connecting to this Dapp</p>
 					<h5>To upload a video</h5>
 					<ol>
@@ -42,7 +42,7 @@ export default class Home extends Component {
 				<p>
 					I'd love to have help whether it's on improving the code or the idea itself. <br />
 					Please go to the&nbsp;
-					<a href="https://github.com/thebrandonlucas/combat-deepfakes-blockchain/" target="_blank">
+					<a href="https://github.com/thebrandonlucas/combat-deepfakes-blockchain/" target="_blank" rel="noopener noreferrer">
 						Github
 					</a>
 					&nbsp;or send me an email at&nbsp;

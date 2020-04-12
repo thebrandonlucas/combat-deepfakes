@@ -75,5 +75,5 @@ class Multihash {
   }
 }
 
-export default new Multihash
+export default new Multihash()
 // module.exports = Multihash; 
