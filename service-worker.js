@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/combat-deepfakes/precache-manifest.88664f7efd98034870f0910ab1250030.js"
+  "/combat-deepfakes/precache-manifest.06d4950ea28459e3bf6a66939982e3ae.js"
 );
 
 workbox.clientsClaim();

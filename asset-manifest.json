@@ -1,7 +1,7 @@
 {
   "main.css": "/combat-deepfakes/static/css/main.8afb4968.chunk.css",
-  "main.js": "/combat-deepfakes/static/js/main.1799b756.chunk.js",
-  "main.js.map": "/combat-deepfakes/static/js/main.1799b756.chunk.js.map",
+  "main.js": "/combat-deepfakes/static/js/main.d9abb5d5.chunk.js",
+  "main.js.map": "/combat-deepfakes/static/js/main.d9abb5d5.chunk.js.map",
   "static/css/1.08fc9a7d.chunk.css": "/combat-deepfakes/static/css/1.08fc9a7d.chunk.css",
   "static/js/1.555ee3ff.chunk.js": "/combat-deepfakes/static/js/1.555ee3ff.chunk.js",
   "static/js/1.555ee3ff.chunk.js.map": "/combat-deepfakes/static/js/1.555ee3ff.chunk.js.map",
@@ -10,6 +10,6 @@
   "static/css/1.08fc9a7d.chunk.css.map": "/combat-deepfakes/static/css/1.08fc9a7d.chunk.css.map",
   "static/css/main.8afb4968.chunk.css.map": "/combat-deepfakes/static/css/main.8afb4968.chunk.css.map",
   "index.html": "/combat-deepfakes/index.html",
-  "precache-manifest.88664f7efd98034870f0910ab1250030.js": "/combat-deepfakes/precache-manifest.88664f7efd98034870f0910ab1250030.js",
+  "precache-manifest.06d4950ea28459e3bf6a66939982e3ae.js": "/combat-deepfakes/precache-manifest.06d4950ea28459e3bf6a66939982e3ae.js",
   "service-worker.js": "/combat-deepfakes/service-worker.js"
 }

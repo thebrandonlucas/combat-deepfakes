@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/combat-deepfakes/static/js/runtime~main.51ec9d1e.js"
   },
   {
-    "revision": "1799b756dc47577ce74a",
-    "url": "/combat-deepfakes/static/js/main.1799b756.chunk.js"
+    "revision": "d9abb5d575baa8bfb592",
+    "url": "/combat-deepfakes/static/js/main.d9abb5d5.chunk.js"
   },
   {
     "revision": "555ee3ff056b604b5eae",
     "url": "/combat-deepfakes/static/js/1.555ee3ff.chunk.js"
   },
   {
-    "revision": "1799b756dc47577ce74a",
+    "revision": "d9abb5d575baa8bfb592",
     "url": "/combat-deepfakes/static/css/main.8afb4968.chunk.css"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/combat-deepfakes/static/css/1.08fc9a7d.chunk.css"
   },
   {
-    "revision": "1023c16945e25872805357ab78a43ff2",
+    "revision": "217da7bc15fe9e4fc265a84f31dd852d",
     "url": "/combat-deepfakes/index.html"
   }
 ];
