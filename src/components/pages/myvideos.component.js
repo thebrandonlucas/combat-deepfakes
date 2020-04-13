@@ -27,10 +27,17 @@ export default class MyVideos extends Component {
 		if (videoDataLength !== null && videoDataLength !== 0) {
 			videoDataLength = parseInt(videoDataLength['_hex'], 16) 
 			let videoData = []; 
+			let multihashes = []
 			for (let i = 0; i < videoDataLength; i++) {
 				let currentVideoData = await this.props.contract.methods.getAuthorVideoData(this.props.account, i).call()
 				let multihash = [currentVideoData['0'], currentVideoData['1'], currentVideoData['2']];
 				multihash = Multihash.getMultihashFromBytes32(multihash)
+
+				// filter duplicate entries, FIXME: instead of filtering, figure out why duplicates are getting added in the first place
+				if (multihashes.includes(multihash)) {
+					continue
+				}
+				multihashes.push(multihash)
 				let timestamp = currentVideoData['3']
 				let fakeMarks = parseInt(currentVideoData['4']['_hex'], 16)
 				videoData.push({'multihash': multihash, 'timestamp': timestamp, 'fakeMarks': fakeMarks})
