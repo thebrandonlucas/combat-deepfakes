@@ -15,6 +15,7 @@ export default class Home extends Component {
 				<h3>How do I use this Dapp?</h3>
 				<div>
 					<p>If you haven't yet, install&nbsp;<a href="https://metamask.io/" target="_blank" rel="noopener noreferrer">MetaMask</a></p>
+                    <p>After installing MetaMask, ensure you are on the Ropsten network and have some funds.</p>
 					<p>Continue with instructions below after setting up MetaMask and connecting to this Dapp</p>
 					<h5>To upload a video</h5>
 					<ol>

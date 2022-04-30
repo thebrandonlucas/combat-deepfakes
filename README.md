@@ -20,6 +20,10 @@ To learn more about this project, visit this *article*.
 	- `npm audit fix` (if necessary)
 	- `npm start`
 
+NOTE: THIS PROJECT IS ONLY DEPLOYED ON THE "ROPSTEN" TEST NETWORK. 
+
+YOU MUST SWITCH TO ROPSTEN FOR IT TO WORK
+
 - Usage
 	- Uploading a video: 
 		- A MetaMask popup will appear asking you to connect to the app. Click "Confirm"
