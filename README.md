@@ -2,7 +2,7 @@
 
 This is an evolving project that is designed to combat the proliferation of deepfake videos and begin restoring trust in video integrity through the use of blockchain and timestamps. 
 
-Visit [combat-deepfakes.herokuapp.com](https://combat-deepfakes.herokuapp.com/) to test the Dapp. 
+[Click here](https://thebrandonlucas.github.io/combat-deepfakes/) to test the Dapp. 
 
 To learn more about this project, visit this *article*. 
 
